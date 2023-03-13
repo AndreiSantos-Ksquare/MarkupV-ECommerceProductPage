@@ -1,0 +1,340 @@
+:root {
+    --fontColor: black;
+    --backgroundColor: white;
+    --avatar: url("https://rickandmortyapi.com/api/character/avatar/2.jpeg");
+    --iconD: url("icon/carDark.png");
+    --iconW: url("icon/carWhite.png");
+    --gray: #a0a0a0;
+    --orange: orangered;
+    --fontGray: #3f3f3f;
+}
+
+html {
+    display: flex;
+    flex-flow: column;
+    background-color:var(--backgroundColor);
+    color: var(--fontColor);
+    width: 100%;
+    height: 100%;
+}
+
+* {
+}
+
+/* body containers */
+body {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+}
+
+header {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 85%;
+    height: 100%;
+    padding: 24px 0px 24px 0px;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 100%;
+    border-bottom: solid;
+    border-bottom-color: var(--gray);
+}
+
+main {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 90%;
+    height: 90%;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+/* grid templates */
+
+.grid-main-template {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+
+.grid-main-left {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 85%;
+    height: 100%;
+    padding: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20% ;
+}
+
+.grid-main-right {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 80%;
+    height: 65%;
+    padding: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 30% 25% 25% 15%;
+}
+
+.grid-img-down {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 90%;
+    height: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100% ;
+}
+
+.grid-btn-template {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100% ;
+}
+
+.grid-left-button {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 90%;
+    height: 100%;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 100% ;
+}
+
+.grid-right-button {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100% ;
+}
+
+/* Flex direction */
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-row-reverse {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column;
+}
+
+.flex-column-reverse {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+/* justify content | align */
+.justify-start {
+    justify-content: start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-text-start {
+    justify-self: start;
+}
+
+.justify-text-center {
+    justify-self: center;
+}
+
+.justify-text-end {
+    justify-self: end;
+}
+
+.align-center {
+    align-self: center;
+}
+
+/* width */
+.width-xlg {
+    width: 100%;
+}
+
+/* margin */
+.margin-lr-xs {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.margin-lr-s {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/* none */
+.margin-padding-none {
+    margin: 0;
+    padding: 0;
+}
+
+/* content styles */
+.avatar {
+    display: flex;
+    align-self: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-size: cover;
+    background-image: var(--avatar);
+}
+
+.iconW {
+    display: flex;
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    content: var(--iconW);
+    padding-right: 24px;
+}
+
+.iconD {
+    display: flex;
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    content: var(--iconD);
+    padding-right: 24px;
+}
+
+.header-title {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.img-main {
+    display: flex;
+    height: 85%;
+    width: 85%;
+    border-radius: 8px;
+    background-size: cover;
+    background-image: var(--avatar);
+}
+
+.img-down {
+    display: flex;
+    height: 80%;
+    width: 80%;
+    border-radius: 8px;
+    background-size: cover;
+    background-image: var(--avatar);
+}
+
+.img-down-selected {
+    display: flex;
+    height: 80%;
+    width: 80%;
+    border-radius: 8px;
+    background-size: cover;
+    background-image: var(--avatar);
+    border: solid;
+    border-color: var(--orange);
+    opacity: 0.5;
+}
+
+.sneaker-orange {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.p-two {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.p-three {
+    font-size: 24px;
+    color: var(--fontGray);
+}
+
+.gray-color {
+    color: var(--fontGray);
+    text-decoration-color: var(--fontGray);
+}
+
+.final-price {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.discount-price {
+    border-radius: 4px;
+    margin-left: 16px;
+    padding: 8px;
+    color: var(--orange);
+    background-color: rgb(255, 215, 128);
+}
+
+.original-price {
+    text-decoration: line-through;
+    margin-top: 8px;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+.button-section {
+    font-size: 24px;
+    color: var(--orange);
+    font-weight: bolder;
+    height: 100%;
+    width: 100%;
+}
+
+.count-style {
+    color: black;
+}
+
+.background-gray {
+    border-radius: 8px;
+    background-color: rgb(214, 214, 214);
+}
+
+.button-orange-section {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: var(--orange);
+    box-shadow: 0px 8px 20px 1px rgb(253, 201, 182);
+    height: 100%;
+    width: 100%;
+}
